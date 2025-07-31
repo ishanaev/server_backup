@@ -1,0 +1,45 @@
+# Включить корень
++ /
+
+- /var/data/**
+- /var/lib/docker/**
+- /var/log/**
+- /var/tmp/**
+
+# Включаем системные директории (рекурсивно)
++ /bin/**
++ /boot/**
++ /etc/**
++ /lib/**
++ /lib64/**
++ /opt/**
++ /root/**
++ /sbin/**
++ /srv/**
++ /usr/**
++ /var/**
+
+# Включаем .ssh в /home
++ /home/
++ /home/*/
++ /home/*/.ssh/
++ /home/*/.ssh/**
++ /home/*/.bashrc
++ /home/*/.profile
++ /home/*/.bash_profile
+
+# Всё остальное в /home исключаем
+- /home/*/*
+
+# Исключаем временные и виртуальные директории
+- /dev/**
+- /proc/**
+- /sys/**
+- /tmp/**
+- /run/**
+- /mnt/**
+- /media/**
+- /lost+found/
+
+# Всё остальное по умолчанию — исключить
+#- **
